@@ -6,7 +6,7 @@ type Direction = 'up' | 'down' | 'left' | 'right';
 
 const position = { x: 0, y: 0 };
 
-const move = (direction: Direction) => {
+const moveDirection = (direction: Direction) => {
   switch (direction) {
     case 'up':
       return (position.y += 1);
@@ -22,11 +22,11 @@ const move = (direction: Direction) => {
 };
 
 console.log(position); // { x: 0, y: 0}
-move('up');
+moveDirection('up');
 console.log(position); // { x: 0, y: 1}
-move('down');
+moveDirection('down');
 console.log(position); // { x: 0, y: 0}
-move('left');
+moveDirection('left');
 console.log(position); // { x: -1, y: 0}
-move('right');
+moveDirection('right');
 console.log(position); // { x: 0, y: 0}
